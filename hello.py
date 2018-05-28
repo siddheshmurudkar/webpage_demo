@@ -2,8 +2,6 @@ from flask import Flask, render_template
 
 app = Flask(__name__)
 
-from flask import Flask, render_template, g
-import json
 import os
 import requests
 import random
