@@ -15,22 +15,12 @@ dome3 = []
 dome4 = []
 
 
-@app.route('/shopping')
-def list():
-    return render_template('shopping.html', dome1=dome1, dome1Len=len(dome1), dome2=dome2, dome2Len=len(dome2), dome3=dome3, dome3Len=len(dome3), dome4=dome4, dome4Len=len(dome4))
 
-@app.route('/layout')
-def layout():
-    return render_template('layout.html', domeA1=a1, domeA2=a2, domeA3=a3, domeA4=a4,dome1=dome1)
 
 @app.route('/live')
 def status():
     return render_template('responsive.html', dome1=dome1, dome1Len=len(dome1), dome2=dome2, dome2Len=len(dome2), dome3=dome3, dome3Len=len(dome3), dome4=dome4, dome4Len=len(dome4))
 
-
-@app.route('/demo')
-def live():
-    return render_template('live.html', dome1=dome1, dome1Len=len(dome1), dome2=dome2, dome2Len=len(dome2), dome3=dome3, dome3Len=len(dome3), dome4=dome4, dome4Len=len(dome4))
 
 @app.route('/<device_id>/<person_id>')
 def trackPerson(device_id, person_id):
@@ -97,6 +87,6 @@ if __name__ == '__main__':
 
 @app.route('/')
 def page():
-   return "<h1> hi there, whatsup!!</h1>"
+   return "<h1>OK</h1>"
 if __name__ == "__main__":
    app.run()
